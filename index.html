@@ -2,115 +2,58 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abraham Guo - Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #0779e4 3px solid;
-        }
-
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-
-        header ul li {
-            float: right;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-
-        .main {
-            padding: 20px 0;
-        }
-
-        .main h1 {
-            color: #333;
-        }
-
-        .experience {
-            margin-bottom: 20px;
-        }
-
-        .experience h2 {
-            color: #0779e4;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <div class="container">
             <h1>Abraham Guo</h1>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/abraham-guo-9a6551309/" target="_blank">LinkedIn</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#internships">Internships</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="https://www.linkedin.com/in/abraham-guo-9a6551309/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <div class="container main">
+    <div class="container main" id="main">
         <h1>Welcome to My Portfolio</h1>
-        <p>I'm Abraham Guo, a high school student passionate about technology, robotics, and media. Below, you'll find an overview of my experiences and projects. Feel free to connect with me on <a href="https://www.linkedin.com/in/abraham-guo-9a6551309/" target="_blank">LinkedIn</a> for more details.</p>
+        <p>I'm Abraham Guo, a high school student passionate about technology, robotics, and media. Explore my projects, internships, and educational background through the navigation tabs above. Feel free to connect with me on <a href="https://www.linkedin.com/in/abraham-guo-9a6551309/" target="_blank">LinkedIn</a>.</p>
+    </div>
 
-        <div class="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>Teen Tech Tutor - Cook Memorial Library</strong> (Aspen) - Provided tech support to community members and completed a long-term opportunity in August 2024.</li>
-                <li><strong>Team Captain - Robotics Club</strong> - Led the team to second place in the Abbott Robotics Competition in 11th grade.</li>
-                <li><strong>Director - Media Club</strong> - Directed a film project with my team in 11th grade.</li>
-                <li><strong>Intern - Xperience</strong> - Worked on creating and advertising the company during 11th grade.</li>
-                <li><strong>Website Manager - Xperience</strong> - Improved website compatibility and updated information starting in 2024.</li>
-            </ul>
-        </div>
+    <div class="container" id="education">
+        <h2>Education</h2>
+        <p><strong>Vernon Hills High School</strong> - Currently attending and involved in various clubs and activities focused on engineering, technology, and media.</p>
+        <!-- Placeholder for Education Image -->
+        <img src="education-placeholder.jpg" alt="Education Image" class="placeholder">
+    </div>
 
-        <div class="experience">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Babysavr - Computer Science Club</strong> - Contributed to this innovative project in 11th grade.</li>
-                <li><strong>classCalendar</strong> - Created a 10-25 second video for an app that helps high school students manage their time using built-in Bitmojis.</li>
-            </ul>
-        </div>
+    <div class="container" id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Babysavr - Computer Science Club</strong> - Contributed to this innovative project in 11th grade.</li>
+            <li><strong>classCalendar</strong> - Created a 10-25 second video for an app that helps high school students manage their time using built-in Bitmojis.</li>
+        </ul>
+        <!-- Placeholder for Projects Image -->
+        <img src="projects-placeholder.jpg" alt="Projects Image" class="placeholder">
+    </div>
 
-        <div class="experience">
-            <h2>Education</h2>
-            <p><strong>Vernon Hills High School</strong> - Currently attending and involved in various clubs and activities focused on engineering, technology, and media.</p>
-        </div>
+    <div class="container" id="internships">
+        <h2>Internships</h2>
+        <ul>
+            <li><strong>Teen Tech Tutor - Cook Memorial Library</strong> (Aspen) - Provided tech support to community members and completed a long-term opportunity in August 2024.</li>
+            <li><strong>Intern - Xperience</strong> - Worked on creating and advertising the company during 11th grade.</li>
+        </ul>
+        <!-- Placeholder for Internships Image -->
+        <img src="internships-placeholder.jpg" alt="Internships Image" class="placeholder">
     </div>
 
     <footer>

@@ -11,7 +11,7 @@ body {
     color: #333;
     background-color: #000;
     line-height: 1.6;
-    overflow: hidden; /* To avoid scrollbars from the animation */
+    overflow: hidden;
 }
 
 /* Background Animation */
@@ -42,6 +42,7 @@ body::before {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    padding: 20px 0;
 }
 
 /* Header Styles */
@@ -66,6 +67,10 @@ header h1 {
 
 header h1:hover {
     transform: scale(1.1);
+}
+
+header nav {
+    margin-top: 15px;
 }
 
 header ul {
@@ -93,10 +98,6 @@ header ul li a:hover {
 }
 
 /* Main Section */
-.main {
-    padding: 30px 0;
-}
-
 .main h1 {
     color: #fff;
     margin-bottom: 20px;
@@ -111,12 +112,8 @@ header ul li a:hover {
     margin-bottom: 30px;
 }
 
-/* Experience and Projects Section */
-.experience {
-    margin-bottom: 40px;
-}
-
-.experience h2 {
+/* Experience, Projects, and Internships Section */
+.container h2 {
     color: #0779e4;
     margin-bottom: 15px;
     font-size: 1.8em;
@@ -124,21 +121,29 @@ header ul li a:hover {
     padding-bottom: 10px;
 }
 
-.experience ul {
+.container ul {
     list-style-type: square;
     margin-left: 20px;
     font-size: 1.1em;
     color: #ccc;
 }
 
-.experience ul li {
+.container ul li {
     margin-bottom: 10px;
     transition: transform 0.3s ease;
 }
 
-.experience ul li:hover {
+.container ul li:hover {
     transform: translateX(10px);
     color: #fff;
+}
+
+/* Image Placeholder */
+.placeholder {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 /* Footer Styles */
