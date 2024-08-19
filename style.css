@@ -9,31 +9,23 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
-    background-color: #000;
+    background: linear-gradient(135deg, #476975, #477557);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
     line-height: 1.6;
     overflow: hidden;
 }
 
 /* Background Animation */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('background-animation.gif') repeat;
-    z-index: -1;
-    opacity: 0.2;
-    animation: animateBackground 30s linear infinite;
-}
-
-@keyframes animateBackground {
+@keyframes gradientAnimation {
     0% {
-        background-position: 0 0;
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
     100% {
-        background-position: 100% 100%;
+        background-position: 0% 50%;
     }
 }
 
@@ -170,6 +162,7 @@ footer p a {
 footer p a:hover {
     color: #fff;
 }
+
 /* Carousel Styles */
 .carousel {
     position: relative;
