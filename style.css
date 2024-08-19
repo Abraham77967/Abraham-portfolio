@@ -9,7 +9,7 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
-    background: linear-gradient(135deg, #476975, #477557);
+    background: linear-gradient(135deg, #546db3, #523881);
     background-size: 400% 400%;
     animation: gradientAnimation 8s ease infinite;
     line-height: 1.6;
