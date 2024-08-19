@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Import Custom Font */
 @font-face {
     font-family: 'ValorantFont';
     src: url('fonts/Valorant Font.ttf') format('truetype');
@@ -11,17 +13,11 @@
     font-style: normal;
 }
 
-/* Apply Custom Font to Buttons */
-header ul li a,
-.menu-item {
-    font-family: 'ValorantFont', sans-serif;
-    font-size: 1.2em; /* Adjust size as needed */
-}
 /* Body Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
-    background: linear-gradient(135deg, #546db3, #523881);
+    background: linear-gradient(135deg, #476975, #477557);
     background-size: 400% 400%;
     animation: gradientAnimation 8s ease infinite;
     line-height: 1.6;
@@ -55,7 +51,7 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 5px solid #0779e4;
+    border-bottom: 5px solid #ffffff;
     transition: background-color 0.3s ease;
 }
 
@@ -94,6 +90,7 @@ header ul li a {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background 0.3s ease, color 0.3s ease;
+    font-family: 'ValorantFont', sans-serif;
 }
 
 header ul li a:hover {
@@ -132,6 +129,7 @@ header ul li a:hover {
     width: 30%;
     text-decoration: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: 'ValorantFont', sans-serif;
 }
 
 .menu-item:hover {
