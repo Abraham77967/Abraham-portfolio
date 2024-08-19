@@ -4,7 +4,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'ValorantFont';
+    src: url('fonts/Valorant Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+/* Apply Custom Font to Buttons */
+header ul li a,
+.menu-item {
+    font-family: 'ValorantFont', sans-serif;
+    font-size: 1.2em; /* Adjust size as needed */
+}
 /* Body Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
