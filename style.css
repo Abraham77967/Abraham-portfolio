@@ -17,7 +17,7 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
-    background: linear-gradient(135deg, #476975, #477557);
+    background: linear-gradient(135deg, #50347e, #2d487a);
     background-size: 400% 400%;
     animation: gradientAnimation 8s ease infinite;
     line-height: 1.6;
@@ -51,7 +51,7 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 5px solid #ffffff;
+    border-bottom: 5px solid #0779e4;
     transition: background-color 0.3s ease;
 }
 
