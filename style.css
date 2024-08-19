@@ -10,7 +10,6 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #ddd;
     background-color: #0a0a0a; /* Dark background for tactical aesthetics */
-    line-height: 1.6;
     overflow: hidden;
     position: relative;
 }
@@ -38,7 +37,6 @@ body::before {
     height: 100%;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(34, 34, 34, 0.8)); /* Dark gradient */
     z-index: -2;
-    opacity: 1;
 }
 
 body::after {
@@ -57,14 +55,6 @@ body::after {
 @keyframes linesAnimation {
     0% { background-position: 0 0; }
     100% { background-position: 100% 100%; }
-}
-
-/* Container */
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px 0;
 }
 
 /* Header Styles */
@@ -112,12 +102,13 @@ header ul li a {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: #e60000;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 header ul li a:hover {
     background: #f44336;
     color: #fff;
+    transform: translateY(-5px);
 }
 
 /* Main Section */
@@ -127,6 +118,7 @@ header ul li a:hover {
     font-size: 2.2em;
     text-align: center;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .main p {
@@ -153,6 +145,7 @@ header ul li a:hover {
     text-decoration: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .menu-item:hover {
@@ -180,6 +173,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 footer p {
@@ -197,72 +191,34 @@ footer p a:hover {
     color: #fff;
 }
 
-/* Carousel Styles */
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 40px auto;
-    overflow: hidden;
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.carousel-container {
-    display: flex;
-    transition: transform 0.5s ease;
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.carousel-card {
-    min-width: 100%;
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1c1c1c;
-    color: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.carousel-card.active {
-    opacity: 1;
-    display: flex;
-}
-
-.card-content {
-    max-width: 60%;
-}
-
-.card-image {
-    max-width: 35%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 1.5em;
-    z-index: 10;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.left-btn {
-    left: 10px;
-}
-
-.right-btn {
-    right: 10px;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
