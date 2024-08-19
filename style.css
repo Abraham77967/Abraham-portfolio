@@ -10,8 +10,10 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #ddd;
     background-color: #0a0a0a; /* Dark background for tactical aesthetics */
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
+    line-height: 1.6;
+    padding: 20px;
 }
 
 /* Valorant Font for Headers */
@@ -25,6 +27,7 @@ h1, h2, h3 {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
 /* Background Animation */
@@ -61,24 +64,16 @@ body::after {
 header {
     background-color: #1c1c1c;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
     border-bottom: 5px solid #e60000; /* Valorant red accent */
-    transition: background-color 0.3s ease;
-}
-
-header:hover {
-    background-color: #2d2d2d;
+    margin-bottom: 20px;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
     transition: transform 0.3s ease;
-}
-
-header h1:hover {
-    transform: scale(1.1);
 }
 
 header nav {
@@ -91,7 +86,7 @@ header ul {
 }
 
 header ul li {
-    display: inline;
+    display: inline-block;
     margin-right: 10px;
 }
 
@@ -118,7 +113,6 @@ header ul li a:hover {
     font-size: 2.2em;
     text-align: center;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    animation: fadeInDown 1s ease-in-out;
 }
 
 .main p {
@@ -145,7 +139,6 @@ header ul li a:hover {
     text-decoration: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1s ease-in-out;
 }
 
 .menu-item:hover {
@@ -173,7 +166,6 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
 footer p {
@@ -189,36 +181,4 @@ footer p a {
 
 footer p a:hover {
     color: #fff;
-}
-
-/* Keyframe Animations */
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
