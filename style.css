@@ -5,64 +5,71 @@
     box-sizing: border-box;
 }
 
+/* Import Custom Font */
+@font-face {
+    font-family: 'ValorantFont';
+    src: url('fonts/Valorant Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply Custom Font */
+body, h1, h2, h3, h4, h5, h6, button, nav a {
+    font-family: 'ValorantFont', Arial, sans-serif;
+}
+
 /* Body Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #ddd;
+    color: #fff;
     background-color: #000;
     line-height: 1.6;
     overflow: hidden;
     position: relative;
 }
 
-/* Valorant Font for Headers */
-@font-face {
-    font-family: 'Valorant';
-    src: url('Valorant-Font.ttf') format('truetype');
-}
-
-h1, h2, h3 {
-    font-family: 'Valorant', sans-serif;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-/* Background Animation */
+/* Animated Background */
 body::before {
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, #476975, #477557);
-    z-index: -1;
-    opacity: 0.8;
-    animation: gradientAnimation 15s ease infinite;
+    background: linear-gradient(130deg, #476975, #477557);
+    z-index: -2;
+    animation: gradientShift 15s ease infinite;
 }
 
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 body::after {
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('valorant-lines.png') repeat;
+    background: url('line-animation.svg') repeat;
     z-index: -1;
-    opacity: 0.1;
-    animation: linesAnimation 20s linear infinite;
+    opacity: 0.2;
+    animation: lineAnimation 10s linear infinite;
 }
 
-@keyframes linesAnimation {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 100%; }
+@keyframes lineAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 /* Container */
@@ -79,7 +86,7 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 5px solid #e60000;
+    border-bottom: 5px solid #477557;
     transition: background-color 0.3s ease;
 }
 
@@ -117,12 +124,11 @@ header ul li a {
     font-size: 1.2em;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #e60000;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
 header ul li a:hover {
-    background: #f44336;
+    background: #477557;
     color: #fff;
 }
 
@@ -191,7 +197,7 @@ footer p {
 }
 
 footer p a {
-    color: #e60000;
+    color: #477557;
     text-decoration: none;
     transition: color 0.3s ease;
 }
