@@ -17,7 +17,7 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
-    background: linear-gradient(135deg, #50347e, #2d487a);
+    background: linear-gradient(135deg, #476975, #477557);
     background-size: 400% 400%;
     animation: gradientAnimation 8s ease infinite;
     line-height: 1.6;
@@ -189,7 +189,7 @@ footer p a:hover {
 
 .carousel-card {
     min-width: 100%;
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
@@ -203,7 +203,6 @@ footer p a:hover {
 
 .carousel-card.active {
     opacity: 1;
-    display: flex;
 }
 
 .card-content {
