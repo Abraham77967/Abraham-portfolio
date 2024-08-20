@@ -155,3 +155,34 @@ footer p a:hover {
 .carousel-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+
+/* Page Transition Animation */
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px); /* Slide down effect */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Header Navigation Button Animations */
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #e60000;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+header ul li a:hover {
+    background: #f44336;
+    color: #fff;
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
