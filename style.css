@@ -9,37 +9,82 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #ddd;
-    background-color: #000;
+    background-color: #e7f2f8; /* Baby Blue */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Valorant Font for Headers and Navbar */
+/* Valorant Font for Headers */
 @font-face {
     font-family: 'Valorant';
     src: url('Valorant-Font.ttf') format('truetype');
 }
 
-h1, h2, h3, header nav ul li a {
+h1, h2, h3 {
     font-family: 'Valorant', sans-serif;
-    color: #fff;
+    color: #274472; /* Dark Blue */
     text-transform: uppercase;
+}
+
+/* Background Animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #41729f, #5885af); /* Midnight Blue & Blue Gray */
+    z-index: -1;
+    opacity: 0.8;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('valorant-lines.png') repeat;
+    z-index: -1;
+    opacity: 0.2;
+    animation: linesAnimation 20s linear infinite;
+}
+
+@keyframes linesAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
 /* Header Styles */
 header {
-    background-color: #333;
+    background-color: #274472; /* Dark Blue */
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 5px solid #e60000;
+    border-bottom: 5px solid #ffa384; /* Salmon */
     transition: background-color 0.3s ease;
 }
 
 header:hover {
-    background-color: #444;
+    background-color: #41729f; /* Midnight Blue */
 }
 
 header h1 {
@@ -72,18 +117,53 @@ header ul li a {
     font-size: 1.2em;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #e60000;
+    background-color: #74bdcb; /* Aquamarine */
     transition: background 0.3s ease, color 0.3s ease;
 }
 
 header ul li a:hover {
-    background: #f44336;
+    background: #ffa384; /* Salmon */
     color: #fff;
+}
+
+/* Main Section */
+main {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero {
+    background-color: #e7f2f8; /* Baby Blue */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h1 {
+    color: #274472; /* Dark Blue */
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: #274472; /* Dark Blue */
+    margin-bottom: 30px;
+}
+
+.hero-content a {
+    color: #74bdcb; /* Aquamarine */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hero-content a:hover {
+    color: #ffa384; /* Salmon */
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #274472; /* Dark Blue */
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -96,93 +176,116 @@ footer p {
 }
 
 footer p a {
-    color: #e60000;
+    color: #ffa384; /* Salmon */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 footer p a:hover {
-    color: #fff;
+    color: #e7f2f8; /* Baby Blue */
 }
 
-
-/* Carousel Card Animation */
-.carousel-card {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    position: absolute;
+/* Carousel Styles */
+.carousel {
+    position: relative;
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transform: scale(0.95); /* Slightly shrink the card */
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-card {
+    min-width: 100%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #274472; /* Dark Blue */
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .carousel-card.active {
     opacity: 1;
-    z-index: 2;
-    transform: scale(1); /* Return to normal size */
+    display: flex;
 }
 
-.carousel-container {
-    position: relative;
-    width: 100%;
+.card-content {
+    max-width: 60%;
+}
+
+.card-image {
+    max-width: 35%;
     height: auto;
+    border-radius: 10px;
 }
 
-/* Add more spacing for carousel buttons */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    border: none;
     color: white;
-    font-size: 2rem;
+    border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 3;
-}
-
-.carousel-btn.left-btn {
-    left: 20px;
-}
-
-.carousel-btn.right-btn {
-    right: 20px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    z-index: 10;
+    transition: background-color 0.3s ease;
 }
 
 .carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-
-/* Page Transition Animation */
-.fade-out {
-    opacity: 0;
-    transform: translateY(20px); /* Slide down effect */
-    transition: opacity 0.5s ease, transform 0.5s ease;
+.left-btn {
+    left: 20px;
 }
 
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+.right-btn {
+    right: 20px;
 }
 
-/* Header Navigation Button Animations */
-header ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #e60000;
-    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+/* Horizontal Menu Styles */
+.horizontal-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
 }
 
-header ul li a:hover {
-    background: #f44336;
-    color: #fff;
-    transform: scale(1.1); /* Slightly enlarge the button on hover */
+.menu-item {
+    flex: 1;
+    text-align: center;
+    background-color: #5885af; /* Blue Gray */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #74bdcb; /* Aquamarine */
+}
+
+.menu-content {
+    padding: 20px;
+}
+
+.menu-content h2 {
+    color: #274472; /* Dark Blue */
+    font-size: 1.5em;
+}
+
+.menu-content img {
+    width: 100%;
+    height: auto;
+    border-top: 2px solid #e7f2f8; /* Baby Blue */
 }
