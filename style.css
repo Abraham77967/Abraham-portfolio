@@ -215,3 +215,33 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+
+/* Info Box Styles */
+.info-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section Adjustments */
+.hero {
+    background: #274472;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
