@@ -126,68 +126,32 @@ header ul li a:hover {
     color: #fff;
 }
 
-/* Hero Section */
-.hero {
-    background: url('valorant-hero-bg.jpg') no-repeat center center/cover;
-    color: #fff;
+/* Main Section */
+.main {
     padding: 60px 20px;
     text-align: center;
-    position: relative;
-    margin-bottom: 40px;
 }
 
-.hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: auto;
-}
-
-.hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-}
-
-/* Horizontal Menu */
-.horizontal-menu {
-    display: flex;
-    justify-content: space-around;
-    margin: 40px 0;
-}
-
-.menu-item {
-    text-align: center;
-    background-color: #333;
+.main h1 {
     color: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    width: 30%;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.main p {
+    font-size: 1.1em;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+.main a {
+    color: #e60000;
     text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    overflow: hidden;
+    transition: color 0.3s ease;
 }
 
-.menu-item:hover {
-    background-color: #444;
-    transform: scale(1.05);
-}
-
-.menu-content h2 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-}
-
-.placeholder {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 10px;
+.main a:hover {
+    color: #fff;
 }
 
 /* Footer Styles */
