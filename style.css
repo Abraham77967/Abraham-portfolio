@@ -70,7 +70,7 @@ body::after {
 .container {
     width: 80%;
     margin: auto;
-    overflow: hidden;
+    padding: 20px 0;
 }
 
 /* Header Styles */
@@ -80,6 +80,7 @@ header {
     padding: 20px 0;
     text-align: center;
     border-bottom: 5px solid #e60000;
+    margin-bottom: 20px;
     transition: background-color 0.3s ease;
 }
 
@@ -127,31 +128,71 @@ header ul li a:hover {
 }
 
 /* Main Section */
-.main {
+main {
+    flex: 1;
     padding: 60px 20px;
     text-align: center;
 }
 
-.main h1 {
+main h1 {
     color: #fff;
     margin-bottom: 20px;
     font-size: 2.2em;
 }
 
-.main p {
+main p {
     font-size: 1.1em;
     color: #ddd;
     margin-bottom: 30px;
 }
 
-.main a {
+main a {
     color: #e60000;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.main a:hover {
+main a:hover {
     color: #fff;
+}
+
+/* Horizontal Menu */
+.horizontal-menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu-item {
+    flex: 1 1 calc(33% - 40px); /* Flexible width for each item */
+    text-align: center;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item:hover {
+    background-color: #2d2d2d;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.menu-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.placeholder {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 /* Footer Styles */
@@ -160,7 +201,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: auto;
 }
 
 footer p {
