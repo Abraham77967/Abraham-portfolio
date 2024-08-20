@@ -19,7 +19,7 @@ body {
 /* Valorant Font for Headers */
 @font-face {
     font-family: 'Valorant';
-    src: url('Valorant-Font.ttf') format('truetype');
+    src: url('Valorant Font.ttf') format('truetype');
 }
 
 h1, h2, h3 {
