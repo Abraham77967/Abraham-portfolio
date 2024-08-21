@@ -7,9 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
         cards.forEach((card, i) => {
             card.classList.remove('active');
             card.style.visibility = 'hidden'; // Hide all cards initially
+            card.style.opacity = '0';
             if (i === index) {
                 card.classList.add('active');
                 card.style.visibility = 'visible'; // Show the active card
+                card.style.opacity = '1';
             }
         });
     }
@@ -58,4 +60,3 @@ document.addEventListener('DOMContentLoaded', () => {
         bodyContent.classList.add('fade-in'); // Only fade in after the page has fully loaded
     });
 });
-
