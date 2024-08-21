@@ -179,6 +179,7 @@ main {
 /* Apply Glamour Day font to all other text */
 .hero-content p, 
 .internship-section p, 
+.education-section p, 
 footer p, 
 .carousel-container p, 
 .menu-content p {
@@ -195,8 +196,8 @@ footer p,
     color: #ffa384; /* Salmon */
 }
 
-/* Internship Section */
-.internship-section {
+/* Internship Section (also used for Education Section) */
+.internship-section, .education-section {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
@@ -206,7 +207,7 @@ footer p,
     text-align: left;
 }
 
-.internship-section h3 {
+.internship-section h3, .education-section h3 {
     font-size: 1.5em;
     color: #274472; /* Dark Blue */
     margin-bottom: 10px;
@@ -214,18 +215,18 @@ footer p,
     text-transform: uppercase;
 }
 
-.internship-section p {
+.internship-section p, .education-section p {
     font-size: 1em;
     color: #274472; /* Dark Blue */
     margin-bottom: 20px;
     line-height: 1.5;
 }
 
-.internship-item {
+.internship-item, .education-item {
     margin-bottom: 40px;
 }
 
-.internship-item:last-child {
+.internship-item:last-child, .education-item:last-child {
     margin-bottom: 0;
 }
 
@@ -325,6 +326,41 @@ footer p a:hover {
 
 .carousel-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Horizontal Menu Styles */
+.horizontal-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.menu-item {
+    flex: 1;
+    text-align: center;
+    background-color: #5885af; /* Blue Gray */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #74bdcb; /* Aquamarine */
+}
+
+.menu-content {
+    padding: 20px;
+}
+
+.menu-content h2 {
+    color: #274472; /* Dark Blue */
+    font-size: 1.5em;
+}
+
+.menu-content img {
+    width: 100%;
+    height: auto;
+    border-top: 2px solid #e7f2f8; /* Baby Blue */
 }
 
 /* Fade-in and Slide-in Animations */
