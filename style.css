@@ -19,7 +19,7 @@
 /* Body Styles */
 body {
     font-family: 'Glamour Day', Arial, sans-serif;
-    color: #274472; /* Dark Blue */
+    color: #ddd;
     background-color: #e7f2f8; /* Baby Blue */
     line-height: 1.6;
     display: flex;
@@ -325,6 +325,41 @@ footer p a:hover {
 
 .carousel-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Horizontal Menu Styles */
+.horizontal-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.menu-item {
+    flex: 1;
+    text-align: center;
+    background-color: #5885af; /* Blue Gray */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #74bdcb; /* Aquamarine */
+}
+
+.menu-content {
+    padding: 20px;
+}
+
+.menu-content h2 {
+    color: #274472; /* Dark Blue */
+    font-size: 1.5em;
+}
+
+.menu-content img {
+    width: 100%;
+    height: auto;
+    border-top: 2px solid #e7f2f8; /* Baby Blue */
 }
 
 /* Fade-in and Slide-in Animations */
