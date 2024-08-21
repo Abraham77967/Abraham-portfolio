@@ -58,3 +58,39 @@ document.addEventListener('DOMContentLoaded', () => {
         bodyContent.classList.add('fade-in'); // Only fade in after the page has fully loaded
     });
 });
+
+// Select the carousel buttons and all cards
+const leftBtn = document.querySelector('.left-btn');
+const rightBtn = document.querySelector('.right-btn');
+const cards = document.querySelectorAll('.carousel-card');
+
+let currentIndex = 0; // Index of the currently active card
+
+// Function to update the visibility of the cards
+function updateCards(index) {
+    cards.forEach((card, i) => {
+        // Remove the active class from all cards
+        card.classList.remove('active');
+        // Add the active class to the selected card
+        if (i === index) {
+            card.classList.add('active');
+        }
+    });
+}
+
+// Event listener for the left button
+leftBtn.addEventListener('click', () => {
+    // Move to the previous card, wrap around if at the start
+    currentIndex = (currentIndex === 0) ? cards.length - 1 : currentIndex - 1;
+    updateCards(currentIndex);
+});
+
+// Event listener for the right button
+rightBtn.addEventListener('click', () => {
+    // Move to the next card, wrap around if at the end
+    currentIndex = (currentIndex === cards.length - 1) ? 0 : currentIndex + 1;
+    updateCards(currentIndex);
+});
+
+// Initialize the first card as active when the page loads
+updateCards(currentIndex);
