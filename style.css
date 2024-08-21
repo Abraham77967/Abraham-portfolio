@@ -19,7 +19,7 @@
 /* Body Styles */
 body {
     font-family: 'Glamour Day', Arial, sans-serif;
-    color: #ddd;
+    color: #274472; /* Dark Blue */
     background-color: #e7f2f8; /* Baby Blue */
     line-height: 1.6;
     display: flex;
@@ -179,6 +179,7 @@ main {
 /* Apply Glamour Day font to all other text */
 .hero-content p, 
 .internship-section p, 
+.education-section p, 
 footer p, 
 .carousel-container p, 
 .menu-content p {
@@ -195,8 +196,8 @@ footer p,
     color: #ffa384; /* Salmon */
 }
 
-/* Internship Section */
-.internship-section {
+/* Internship Section (also used for Education Section) */
+.internship-section, .education-section {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
@@ -206,7 +207,7 @@ footer p,
     text-align: left;
 }
 
-.internship-section h3 {
+.internship-section h3, .education-section h3 {
     font-size: 1.5em;
     color: #274472; /* Dark Blue */
     margin-bottom: 10px;
@@ -214,18 +215,18 @@ footer p,
     text-transform: uppercase;
 }
 
-.internship-section p {
+.internship-section p, .education-section p {
     font-size: 1em;
     color: #274472; /* Dark Blue */
     margin-bottom: 20px;
     line-height: 1.5;
 }
 
-.internship-item {
+.internship-item, .education-item {
     margin-bottom: 40px;
 }
 
-.internship-item:last-child {
+.internship-item:last-child, .education-item:last-child {
     margin-bottom: 0;
 }
 
