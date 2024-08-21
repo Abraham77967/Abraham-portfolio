@@ -5,9 +5,20 @@
     box-sizing: border-box;
 }
 
+/* Fonts */
+@font-face {
+    font-family: 'Valorant';
+    src: url('Valorant-Font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lonely Cake';
+    src: url('Lonely-Cake.ttf') format('truetype');
+}
+
 /* Body Styles */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Lonely Cake', Arial, sans-serif;
     color: #ddd;
     background-color: #e7f2f8; /* Baby Blue */
     line-height: 1.6;
@@ -17,11 +28,6 @@ body {
 }
 
 /* Valorant Font for Headers and Navigation */
-@font-face {
-    font-family: 'Valorant';
-    src: url('Valorant-Font.ttf') format('truetype');
-}
-
 h1, h2, h3, header ul li a {
     font-family: 'Valorant', sans-serif;
     color: #274472; /* Dark Blue */
@@ -124,6 +130,9 @@ header {
     padding: 20px 0;
     text-align: center;
     border-bottom: 5px solid #ffa384; /* Salmon */
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure the header is always visible and on top */
     transition: background-color 0.3s ease;
 }
 
@@ -201,6 +210,15 @@ main {
     font-size: 1em;
     color: #274472; /* Dark Blue */
     margin-bottom: 20px;
+}
+
+/* Apply Lonely Cake font to all other text */
+.hero-content p, 
+.internship-section p, 
+footer p, 
+.carousel-container p, 
+.menu-content p {
+    font-family: 'Lonely Cake', Arial, sans-serif;
 }
 
 .hero-content a {
