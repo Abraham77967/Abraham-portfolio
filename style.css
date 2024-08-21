@@ -16,13 +16,13 @@ body {
     min-height: 100vh;
 }
 
-/* Valorant Font for Headers */
+/* Valorant Font for Headers and Navigation */
 @font-face {
     font-family: 'Valorant';
     src: url('Valorant-Font.ttf') format('truetype');
 }
 
-h1, h2, h3 {
+h1, h2, h3, header ul li a {
     font-family: 'Valorant', sans-serif;
     color: #274472; /* Dark Blue */
     text-transform: uppercase;
@@ -36,15 +36,18 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, #41729f, #5885af); /* Midnight Blue & Blue Gray */
+    background: linear-gradient(120deg, #41729f, #5885af, #ffa384); /* Midnight Blue, Blue Gray, and Salmon */
     z-index: -1;
-    opacity: 0.8;
+    opacity: 0.9;
+    background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
 }
 
 @keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
     50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
     100% { background-position: 0% 50%; }
 }
 
@@ -119,6 +122,8 @@ header ul li a {
     border-radius: 5px;
     background-color: #74bdcb; /* Aquamarine */
     transition: background 0.3s ease, color 0.3s ease;
+    font-family: 'Valorant', sans-serif; /* Ensures the Valorant font is applied */
+    text-transform: uppercase; /* Ensure consistency in text transformation */
 }
 
 header ul li a:hover {
@@ -292,4 +297,33 @@ footer p a:hover {
     width: 100%;
     height: auto;
     border-top: 2px solid #e7f2f8; /* Baby Blue */
+}
+
+/* Fade-in and Fade-out animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; /* Duration matches JavaScript setTimeout */
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 0.5s forwards; /* Duration matches JavaScript setTimeout */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
