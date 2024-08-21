@@ -9,12 +9,11 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #ddd;
-    background-color: #000;
+    background-color: #e7f2f8; /* Baby Blue */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow: hidden; /* Ensure background animations are visible */
 }
 
 /* Valorant Font for Headers */
@@ -25,7 +24,7 @@ body {
 
 h1, h2, h3 {
     font-family: 'Valorant', sans-serif;
-    color: #fff;
+    color: #274472; /* Dark Blue */
     text-transform: uppercase;
 }
 
@@ -37,7 +36,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, #41729f, #5885af);
+    background: linear-gradient(120deg, #41729f, #5885af); /* Midnight Blue & Blue Gray */
     z-index: -1;
     opacity: 0.8;
     animation: gradientAnimation 15s ease infinite;
@@ -76,16 +75,16 @@ body::after {
 
 /* Header Styles */
 header {
-    background-color: #333;
+    background-color: #274472; /* Dark Blue */
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 5px solid #e60000;
+    border-bottom: 5px solid #ffa384; /* Salmon */
     transition: background-color 0.3s ease;
 }
 
 header:hover {
-    background-color: #444;
+    background-color: #41729f; /* Midnight Blue */
 }
 
 header h1 {
@@ -118,100 +117,175 @@ header ul li a {
     font-size: 1.2em;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #e60000;
-    transition: background 0.3s ease;
+    background-color: #74bdcb; /* Aquamarine */
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 header ul li a:hover {
-    background-color: #d50000;
+    background: #ffa384; /* Salmon */
+    color: #fff;
 }
 
-/* Hero Section */
-.hero {
-    background: #274472;
-    color: #fff;
-    padding: 40px 0;
+/* Main Section */
+main {
+    padding: 60px 20px;
     text-align: center;
 }
 
+.hero {
+    background-color: #e7f2f8; /* Baby Blue */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    color: #274472; /* Dark Blue */
+    margin-bottom: 20px;
+    font-size: 2.2em;
 }
 
 .hero-content p {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    color: #274472; /* Dark Blue */
+    margin-bottom: 30px;
+}
+
+.hero-content a {
+    color: #74bdcb; /* Aquamarine */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hero-content a:hover {
+    color: #ffa384; /* Salmon */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #274472; /* Dark Blue */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+footer p a {
+    color: #ffa384; /* Salmon */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer p a:hover {
+    color: #e7f2f8; /* Baby Blue */
 }
 
 /* Carousel Styles */
 .carousel {
     position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
     overflow: hidden;
-    margin: 20px auto;
 }
 
 .carousel-container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
 }
 
 .carousel-card {
     min-width: 100%;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
+    display: none;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    background-color: #274472; /* Dark Blue */
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .carousel-card.active {
     opacity: 1;
+    display: flex;
 }
 
 .card-content {
-    text-align: center;
-    color: #fff;
+    max-width: 60%;
 }
 
 .card-image {
-    width: 100%;
+    max-width: 35%;
     height: auto;
-    margin-top: 15px;
+    border-radius: 10px;
 }
 
 .carousel-btn {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5em;
     z-index: 10;
-    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .left-btn {
-    left: 10px;
+    left: 20px;
 }
 
 .right-btn {
-    right: 10px;
+    right: 20px;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
+/* Horizontal Menu Styles */
+.horizontal-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.menu-item {
+    flex: 1;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
+    background-color: #5885af; /* Blue Gray */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #74bdcb; /* Aquamarine */
+}
+
+.menu-content {
+    padding: 20px;
+}
+
+.menu-content h2 {
+    color: #274472; /* Dark Blue */
+    font-size: 1.5em;
+}
+
+.menu-content img {
     width: 100%;
+    height: auto;
+    border-top: 2px solid #e7f2f8; /* Baby Blue */
 }
